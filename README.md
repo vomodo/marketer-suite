@@ -29,26 +29,6 @@
 
 ---
 
-## ⚙️ Hướng dẫn phát triển
-
-### Thiết lập môi trường
-
-1. Cài đặt Node.js (>=18), Wranger CLI  
-2. Clone repo và cài dependencies Workers + Frontend  
-3. Thiết lập biến môi trường theo file [.env.example]  
-4. Khởi tạo và áp dụng migration trên D1 local  
-5. Chạy `wrangler dev` cho workers và `wrangler pages dev ./public` cho frontend
-
-### Bypass Turnstile local dev  
-Xem chi tiết [docs/TURNSTILE_SETUP.md](docs/TURNSTILE_SETUP.md)
-
-### Chạy migration DB  
-Xem [docs/DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)
-
-# Marketer Suite
-
----
-
 ## 🎨 Thiết kế & Style Guide
 
 - **Icon sử dụng toàn bộ ở định dạng SVG**, đảm bảo hiển thị sắc nét và tối ưu tải trang.  
@@ -72,6 +52,24 @@ Xem [docs/DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)
 - Ưu tiên thiết kế responsive desktop-first (độ phân giải phổ biến của marketer >1280px).  
 - Thực thi tất cả icon dưới dạng SVG inline hoặc sprite sheet từ Flaticons.  
 - Luôn tuân thủ style guide để đảm bảo sản phẩm cuối cùng có hiệu suất, dễ quản lý, và đáp ứng tốt nhu cầu người dùng chính.  
+
+---
+
+## ⚙️ Hướng dẫn phát triển
+
+### Thiết lập môi trường
+
+1. Cài đặt Node.js (>=18), Wrangler CLI  
+2. Clone repo và cài dependencies Workers + Frontend  
+3. Thiết lập biến môi trường theo file [.env.example]  
+4. Khởi tạo và áp dụng migration trên D1 local  
+5. Chạy `wrangler dev` cho workers và `wrangler pages dev ./public` cho frontend
+
+### Bypass Turnstile local dev  
+Xem chi tiết [docs/TURNSTILE_SETUP.md](docs/TURNSTILE_SETUP.md)
+
+### Chạy migration DB  
+Xem [docs/DATABASE_SCHEMA.md](docs/DATABASE_SCHEMA.md)
 
 ---
 
