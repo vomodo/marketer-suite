@@ -9,6 +9,9 @@ main = "src/index.ts"
 compatibility_date = "2025-11-23"
 compatibility_flags = ["nodejs_compat"]
 
+# Migrations directory (located at project root)
+migrations_dir = "../../migrations"
+
 # ============================================
 # Development Environment
 # ============================================
