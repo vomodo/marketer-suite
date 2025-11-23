@@ -40,21 +40,18 @@ name = "marketer-suite-api"
 [env.production.vars]
 ENVIRONMENT = "production"
 
-# D1 Database (Production)
-# TODO: Create production database with: wrangler d1 create marketer-suite-prod
-# [[env.production.d1_databases]]
-# binding = "DB"
-# database_name = "marketer-suite-prod"
-# database_id = "d263a245-bc3c-4f3c-b118-a821ccbcb2bc"
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "marketer-suite-prod"
+database_id = "d263a245-bc3c-4f3c-b118-a821ccbcb2bc"
 
-# KV Namespaces (Production)
 [[env.production.kv_namespaces]]
 binding = "JWT_CACHE"
-id = "TODO_PRODUCTION_JWT_CACHE_ID"
+id = "2d9edcdb69034e909fa0d95d4df0c707"
 
 [[env.production.kv_namespaces]]
 binding = "SESSIONS"
-id = "TODO_PRODUCTION_SESSIONS_ID"
+id = "0b7663b14e4744c38673d338543e228d"
 
 # ============================================
 # Secrets (Set via: wrangler secret put <NAME> --env <environment>)
