@@ -1,0 +1,5 @@
+JWT_SECRET=your-jwt-secret-here
+TURNSTILE_SECRET=your-turnstile-secret
+N8N_WEBHOOK_URL=https://your-n8n.com/webhook
+CASSO_API_KEY=your-casso-key
+CASSO_WEBHOOK_SECRET=your-webhook-secret
