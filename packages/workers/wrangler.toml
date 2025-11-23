@@ -1,30 +1,81 @@
+# Wrangler Configuration
+# Marketer Suite API - Cloudflare Workers
+
+# ============================================
+# Base Configuration
+# ============================================
 name = "marketer-suite-api"
 main = "src/index.ts"
 compatibility_date = "2025-11-23"
 compatibility_flags = ["nodejs_compat"]
 
-# D1 Database
-[[d1_databases]]
+# ============================================
+# Development Environment
+# ============================================
+[env.development]
+name = "marketer-suite-api-dev"
+
+[env.development.vars]
+ENVIRONMENT = "development"
+
+# D1 Database (Development)
+[[env.development.d1_databases]]
 binding = "DB"
 database_name = "marketer-suite-dev"
 database_id = "e0d6e5b5-d062-4b27-b0a4-8c4839dce3e3"
 
-# KV Namespaces
-[[kv_namespaces]]
+# KV Namespaces (Development)
+[[env.development.kv_namespaces]]
 binding = "JWT_CACHE"
 id = "7d6a15aaf8884e8fa78cd138141ef022"
 
-[[kv_namespaces]]
+[[env.development.kv_namespaces]]
 binding = "SESSIONS"
 id = "8689632d208d4b7b9ab9a566e6e13886"
 
-# Environment variables (non-sensitive)
-[vars]
-ENVIRONMENT = "development"
+# ============================================
+# Production Environment
+# ============================================
+[env.production]
+name = "marketer-suite-api"
 
-# Secrets (use: wrangler secret put <NAME>)
-# JWT_SECRET
-# TURNSTILE_SECRET
-# N8N_WEBHOOK_URL
-# CASSO_API_KEY
-# CASSO_WEBHOOK_SECRET
+[env.production.vars]
+ENVIRONMENT = "production"
+
+# D1 Database (Production)
+# TODO: Create production database with: wrangler d1 create marketer-suite-prod
+# [[env.production.d1_databases]]
+# binding = "DB"
+# database_name = "marketer-suite-prod"
+# database_id = "PRODUCTION_DB_ID_HERE"
+
+# KV Namespaces (Production)
+# TODO: Create production KV namespaces
+# [[env.production.kv_namespaces]]
+# binding = "JWT_CACHE"
+# id = "PRODUCTION_JWT_CACHE_ID_HERE"
+
+# [[env.production.kv_namespaces]]
+# binding = "SESSIONS"
+# id = "PRODUCTION_SESSIONS_ID_HERE"
+
+# ============================================
+# Secrets (Set via: wrangler secret put <NAME> --env <environment>)
+# ============================================
+# Required secrets for both environments:
+# - JWT_SECRET: Secret key for JWT signing
+# - N8N_WEBHOOK_URL: N8N webhook endpoint for OTP emails
+# - TURNSTILE_SECRET: Cloudflare Turnstile secret key
+# - CASSO_API_KEY: CASSO payment API key
+# - CASSO_WEBHOOK_SECRET: CASSO webhook verification secret
+#
+# Development setup:
+#   wrangler secret put JWT_SECRET --env development
+#   wrangler secret put N8N_WEBHOOK_URL --env development
+#
+# Production setup:
+#   wrangler secret put JWT_SECRET --env production
+#   wrangler secret put N8N_WEBHOOK_URL --env production
+#   wrangler secret put TURNSTILE_SECRET --env production
+#   wrangler secret put CASSO_API_KEY --env production
+#   wrangler secret put CASSO_WEBHOOK_SECRET --env production
