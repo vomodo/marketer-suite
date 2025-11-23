@@ -1,14 +1,22 @@
-// React Components for Auth
-import React from 'react';
+// src/components/Auth/LoginForm.js
 
-export function LoginForm() {
-  return <div>Login Form Component</div>;
-}
-
-export function RegisterForm() {
-  return <div>Register Form Component</div>;
-}
-
-export function OTPVerify() {
-  return <div>OTP Verify Component</div>;
-}
+export const LoginForm = {
+  template: () => `
+    <div class="card">
+      <h1>Đăng nhập</h1>
+      <p>Nhập email để nhận mã OTP</p>
+      <form id="login-form">
+        <div class="mb-md">
+          <label for="email">Email</label>
+          <input type="email" id="email" class="input" placeholder="your@email.com" required />
+        </div>
+        <div id="login-error" class="error hidden"></div>
+        <button type="submit" class="btn btn-primary">Gửi mã</button>
+      </form>
+    </div>
+  `,
+  mount: (onSubmit) => {
+    const form = document.getElementById('login-form');
+    form.onsubmit = onSubmit;
+  }
+};
