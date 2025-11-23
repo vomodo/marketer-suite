@@ -18,13 +18,11 @@ name = "marketer-suite-api-dev"
 [env.development.vars]
 ENVIRONMENT = "development"
 
-# D1 Database (Development)
 [[env.development.d1_databases]]
 binding = "DB"
 database_name = "marketer-suite-dev"
 database_id = "e0d6e5b5-d062-4b27-b0a4-8c4839dce3e3"
 
-# KV Namespaces (Development)
 [[env.development.kv_namespaces]]
 binding = "JWT_CACHE"
 id = "7d6a15aaf8884e8fa78cd138141ef022"
@@ -43,21 +41,19 @@ name = "marketer-suite-api"
 ENVIRONMENT = "production"
 
 # D1 Database (Production)
-# TODO: Create production database with: wrangler d1 create marketer-suite-prod
-# [[env.production.d1_databases]]
-# binding = "DB"
-# database_name = "marketer-suite-prod"
-# database_id = "PRODUCTION_DB_ID_HERE"
+[[env.production.d1_databases]]
+binding = "DB"
+database_name = "marketer-suite-prod"
+database_id = "TODO_PRODUCTION_DB_ID"
 
 # KV Namespaces (Production)
-# TODO: Create production KV namespaces
-# [[env.production.kv_namespaces]]
-# binding = "JWT_CACHE"
-# id = "PRODUCTION_JWT_CACHE_ID_HERE"
+[[env.production.kv_namespaces]]
+binding = "JWT_CACHE"
+id = "TODO_PRODUCTION_JWT_CACHE_ID"
 
-# [[env.production.kv_namespaces]]
-# binding = "SESSIONS"
-# id = "PRODUCTION_SESSIONS_ID_HERE"
+[[env.production.kv_namespaces]]
+binding = "SESSIONS"
+id = "TODO_PRODUCTION_SESSIONS_ID"
 
 # ============================================
 # Secrets (Set via: wrangler secret put <NAME> --env <environment>)
@@ -68,14 +64,3 @@ ENVIRONMENT = "production"
 # - TURNSTILE_SECRET: Cloudflare Turnstile secret key
 # - CASSO_API_KEY: CASSO payment API key
 # - CASSO_WEBHOOK_SECRET: CASSO webhook verification secret
-#
-# Development setup:
-#   wrangler secret put JWT_SECRET --env development
-#   wrangler secret put N8N_WEBHOOK_URL --env development
-#
-# Production setup:
-#   wrangler secret put JWT_SECRET --env production
-#   wrangler secret put N8N_WEBHOOK_URL --env production
-#   wrangler secret put TURNSTILE_SECRET --env production
-#   wrangler secret put CASSO_API_KEY --env production
-#   wrangler secret put CASSO_WEBHOOK_SECRET --env production
