@@ -1,8 +1,11 @@
--- SQL script to create users table
+-- Migration 0001: Create users table
 CREATE TABLE users (
-    id SERIAL PRIMARY KEY,
-    username VARCHAR(50),
-    password VARCHAR(255),
-    email VARCHAR(255),
-    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  email TEXT UNIQUE NOT NULL,
+  tier TEXT DEFAULT 'free',
+  payment_status TEXT DEFAULT 'inactive',
+  created_at INTEGER NOT NULL
 );
+
+-- Create index for email lookups
+CREATE INDEX idx_users_email ON users(email);
