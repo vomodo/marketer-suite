@@ -1,5 +1,14 @@
 {
-  "name": "workers",
+  "name": "marketer-suite-workers",
   "version": "1.0.0",
-  "dependencies": {}
+  "private": true,
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20241127.0",
+    "typescript": "^5.3.3",
+    "wrangler": "^4.50.0"
+  }
 }

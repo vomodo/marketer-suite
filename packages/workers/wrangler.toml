@@ -1,1 +1,30 @@
+name = "marketer-suite-api"
+main = "src/index.ts"
+compatibility_date = "2025-11-23"
+compatibility_flags = ["nodejs_compat"]
 
+# D1 Database
+[[d1_databases]]
+binding = "DB"
+database_name = "marketer-suite-dev"
+database_id = "e0d6e5b5-d062-4b27-b0a4-8c4839dce3e3"
+
+# KV Namespaces
+[[kv_namespaces]]
+binding = "JWT_CACHE"
+id = "7d6a15aaf8884e8fa78cd138141ef022"
+
+[[kv_namespaces]]
+binding = "SESSIONS"
+id = "8689632d208d4b7b9ab9a566e6e13886"
+
+# Environment variables (non-sensitive)
+[vars]
+ENVIRONMENT = "development"
+
+# Secrets (use: wrangler secret put <NAME>)
+# JWT_SECRET
+# TURNSTILE_SECRET
+# N8N_WEBHOOK_URL
+# CASSO_API_KEY
+# CASSO_WEBHOOK_SECRET
