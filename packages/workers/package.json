@@ -2,9 +2,22 @@
   "name": "marketer-suite-workers",
   "version": "1.0.0",
   "private": true,
+  "description": "Marketer Suite API - Cloudflare Workers backend",
   "scripts": {
-    "dev": "wrangler dev",
-    "deploy": "wrangler deploy"
+    "dev": "wrangler dev --env development",
+    "dev:local": "wrangler dev --local --env development",
+    "deploy:staging": "wrangler deploy --env development",
+    "deploy:prod": "wrangler deploy --env production",
+    "deploy": "npm run deploy:staging",
+    "tail:dev": "wrangler tail --env development",
+    "tail:prod": "wrangler tail --env production",
+    "d1:migrations:list": "wrangler d1 migrations list marketer-suite-dev --env development",
+    "d1:migrations:apply": "wrangler d1 migrations apply marketer-suite-dev --env development",
+    "d1:execute": "wrangler d1 execute marketer-suite-dev --env development",
+    "secrets:put:dev": "wrangler secret put --env development",
+    "secrets:put:prod": "wrangler secret put --env production",
+    "secrets:list:dev": "wrangler secret list --env development",
+    "secrets:list:prod": "wrangler secret list --env production"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241127.0",
