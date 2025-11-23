@@ -14,7 +14,6 @@ compatibility_flags = ["nodejs_compat"]
 # ============================================
 [env.development]
 name = "marketer-suite-api-dev"
-migrations_dir = "../../migrations"
 
 [env.development.vars]
 ENVIRONMENT = "development"
@@ -37,7 +36,6 @@ id = "8689632d208d4b7b9ab9a566e6e13886"
 # ============================================
 [env.production]
 name = "marketer-suite-api"
-migrations_dir = "../../migrations"
 
 [env.production.vars]
 ENVIRONMENT = "production"
