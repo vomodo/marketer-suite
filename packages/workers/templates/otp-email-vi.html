@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mã OTP - Marketer Suite</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      max-width: 600px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    .container {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 30px;
+      border: 1px solid #e0e0e0;
+    }
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    .logo {
+      font-size: 28px;
+      font-weight: bold;
+      color: #007bff;
+    }
+    .otp-code {
+      font-size: 36px;
+      font-weight: bold;
+      text-align: center;
+      background: #007bff;
+      color: white;
+      padding: 20px;
+      border-radius: 8px;
+      letter-spacing: 8px;
+      margin: 30px 0;
+    }
+    .info {
+      background: #fff;
+      padding: 20px;
+      border-radius: 6px;
+      border-left: 4px solid #007bff;
+      margin: 20px 0;
+    }
+    .footer {
+      text-align: center;
+      margin-top: 30px;
+      padding-top: 20px;
+      border-top: 1px solid #e0e0e0;
+      color: #666;
+      font-size: 14px;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      border-radius: 6px;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="logo">🚀 Marketer Suite</div>
+      <p>Bộ công cụ SEO & Content Marketing</p>
+    </div>
+    
+    <h2>Xin chào! 👋</h2>
+    <p>Bạn đã yêu cầu đăng nhập vào Marketer Suite. Sử dụng mã OTP bên dưới để xác thực:</p>
+    
+    <div class="otp-code">{{OTP_CODE}}</div>
+    
+    <div class="info">
+      <strong>📌 Lưu ý quan trọng:</strong>
+      <ul>
+        <li>Mã OTP này có hiệu lực trong <strong>5 phút</strong></li>
+        <li>Không chia sẻ mã này với bất kỳ ai</li>
+        <li>Nếu bạn không yêu cầu mã này, vui lòng bỏ qua email</li>
+      </ul>
+    </div>
+    
+    <div class="warning">
+      <strong>⚠️ Bảo mật:</strong> Marketer Suite sẽ không bao giờ yêu cầu mã OTP qua điện thoại hoặc email. Không cung cấp mã này cho bất kỳ ai.
+    </div>
+    
+    <p>Nếu bạn cần hỗ trợ, vui lòng liên hệ:</p>
+    <ul>
+      <li>📧 Email: <a href="mailto:duc@ducvu.vn">duc@ducvu.vn</a></li>
+      <li>🌐 Website: <a href="https://ducvu.vn">ducvu.vn</a></li>
+    </ul>
+    
+    <div class="footer">
+      <p>Email này được gửi tự động từ Marketer Suite</p>
+      <p>&copy; 2025 Marketer Suite. All rights reserved.</p>
+    </div>
+  </div>
+</body>
+</html>
