@@ -9,6 +9,9 @@ main = "src/index.ts"
 compatibility_date = "2025-11-23"
 compatibility_flags = ["nodejs_compat"]
 
+# Migrations directory (located at project root)
+migrations_dir = "../../migrations"
+
 # ============================================
 # Development Environment
 # ============================================
@@ -47,7 +50,7 @@ ENVIRONMENT = "production"
 # [[env.production.d1_databases]]
 # binding = "DB"
 # database_name = "marketer-suite-prod"
-# database_id = "PRODUCTION_DB_ID_HERE"
+# database_id = "d263a245-bc3c-4f3c-b118-a821ccbcb2bc"
 
 # KV Namespaces (Production)
 # TODO: Create production KV namespaces
